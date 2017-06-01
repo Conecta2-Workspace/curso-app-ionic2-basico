@@ -1,0 +1,48 @@
+<!--
+  Generated template for the CancionesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+   <button ion-button menuToggle>
+       <ion-icon name="menu"></ion-icon>
+   </button>
+    <ion-title>Canciones</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="openCancionPopOver($event)">
+            <ion-icon name="more"></ion-icon>        
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+
+<div class="user playlist">
+    <img src="{{playList.picture}}" alt="">
+    <h1>{{playList.title}}</h1>
+</div>
+
+<ion-list>
+    
+    
+    <tecno-player *ngFor="let c of songs"
+        [titulo] = "c.title"
+        [artits] = "c.artist.name"
+        [album] = "c.album.title"
+        [cover] = "c.album.cover"
+        [audioSrc] = "c.preview"
+    ></tecno-player>
+    
+    
+    
+</ion-list>
+
+</ion-content>

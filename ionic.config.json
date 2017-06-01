@@ -1,0 +1,11 @@
+{
+    "name": "miapp",
+    "app_id": "",
+    "type": "ionic-angular",
+    "proxies": [
+    {
+      "path": "/deezerAPI",
+      "proxyUrl": "https://api.deezer.com/"
+    }  
+  ]
+}
